@@ -1,25 +1,175 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
+/* Ogólne ustawienia */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
 }
 
 header {
-    background: #333;
+    background-color: #3b5998;
     color: #fff;
-    padding: 20px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ddd;
 }
 
 section {
-    padding: 20px;
+    padding: 30px;
+    margin: 20px 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+#about {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about p{
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    transform: translateX(-20px);
+    margin-left: 35px;
+    line-height: 2;
+    position: relative;
+}
+
+#about p::before {
+    position: absolute;
+    content: "•"; /* Kropka */
+    left: 0; /* Kropka będzie po lewej stronie */
+    transform: translate(-30px, -25%); /* Wyśrodkowanie kropki dokładnie na środku */
+    font-size: 30px; /* Rozmiar kropki */
+    color: #3b5998; /* Kolor kropki */
 }
 
 .project {
-    background: white;
-    padding: 10px;
-    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+}
+
+.project h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #3b5998;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #007bb5;
+}
+
+/* Przyciski */
+button {
+    background-color: #3b5998;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bb5;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.additionals_{
+    border-bottom: #3b5998 solid 8px;
+    border-left: #3b5998 solid 8px;
+    border-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-bottom: 20px;
+    animation: borderAnimation 1s ease-in-out infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-bottom: #3b5998 solid 8px;
+        border-left: #3b5998 solid 8px;
+    }
+    50% {
+        border-bottom: #5b7fcd solid 8px;
+        border-left: #5b7fcd solid 8px;
+    }
+    100% {
+        border-bottom: #3b5998 solid 8px;
+        border-left: #3b5998 solid 8px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    section h2 {
+        font-size: 2rem;
+    }
+    .project {
+        padding: 15px;
+    }
+    .container {
+        width: 95%;
+    }
 }
