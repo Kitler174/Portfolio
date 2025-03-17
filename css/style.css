@@ -100,7 +100,6 @@ section p {
 .project {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     position: relative;
     cursor: pointer;
@@ -177,7 +176,6 @@ button:hover {
 
 .additionals_:hover{
     animation: borderAnimation 0.5s ease-in-out infinite;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .additionals_inact{
