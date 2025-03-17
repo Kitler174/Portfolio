@@ -19,6 +19,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 50px 0;
+    user-select: none;
 }
 
 header h1 {
@@ -46,16 +47,18 @@ section h2 {
 }
 
 section p {
-    font-size: 1.1rem;
+    font-size: 2rem;
     margin-bottom: 15px;
     text-align: justify;
     line-height: 1.8;
+    color: black
 }
 
 #about {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    user-select: none;
 }
 
 #about p{
@@ -65,23 +68,45 @@ section p {
     margin-left: 35px;
     line-height: 2;
     position: relative;
+    color: black;
+    font-size: 1rem;
+}
+
+#projects{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 1s ease;  
 }
 
 #about p::before {
     position: absolute;
-    content: "•"; /* Kropka */
-    left: 0; /* Kropka będzie po lewej stronie */
-    transform: translate(-30px, -25%); /* Wyśrodkowanie kropki dokładnie na środku */
-    font-size: 30px; /* Rozmiar kropki */
-    color: #3b5998; /* Kolor kropki */
+    content: "•"; 
+    left: 0; 
+    transform: translate(-30px, -25%); 
+    font-size: 30px;
+    color: #3b5998; 
 }
 
+#about h2{
+    text-align: left;
+}
 .project {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     position: relative;
+    cursor: pointer;
+    transition: all 1s ease;
+    width: 100%;
+    height: 192px;
 }
 
 .project h3 {
@@ -113,7 +138,6 @@ a:hover {
     color: #007bb5;
 }
 
-/* Przyciski */
 button {
     background-color: #3b5998;
     color: #fff;
@@ -122,7 +146,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+    width:200px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 button:hover {
@@ -135,27 +160,81 @@ button:hover {
 }
 
 .additionals_{
-    border-bottom: #3b5998 solid 8px;
-    border-left: #3b5998 solid 8px;
     border-radius: 16px;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     margin-bottom: 20px;
-    animation: borderAnimation 1s ease-in-out infinite;
+    animation: borderAnimation 3s ease-in-out infinite;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 3s ease,opacity 3s ease;
+    width: 95%;
+    position: relative;
+    max-height: 200px;
+    min-height: 200px;
+    overflow-y: auto;
+    visibility: visible;
 }
 
+.additionals_:hover{
+    animation: borderAnimation 0.5s ease-in-out infinite;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.additionals_inact{
+    width: 95%;
+    top:0;
+    transform: translateX(120%);
+    transition: transform 3s ease,opacity 3s ease;
+    opacity: 0;
+    position: absolute;
+    border-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    margin-bottom: 20px;
+    animation: borderAnimation 3s ease-in-out infinite;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 3s ease,opacity 3s ease;
+}
+
+#wyrownywacz{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 @keyframes borderAnimation {
     0% {
         border-bottom: #3b5998 solid 8px;
-        border-left: #3b5998 solid 8px;
+        border-left: #3b5998 solid 12px;
     }
     50% {
         border-bottom: #5b7fcd solid 8px;
-        border-left: #5b7fcd solid 8px;
+        border-left: #5b7fcd solid 12px;
     }
     100% {
-        border-bottom: #3b5998 solid 8px;
-        border-left: #3b5998 solid 8px;
+        border-bottom: #284b96 solid 8px;
+        border-left: #284b96 solid 12px;
+    }
+}
+
+
+.jiggle{
+    animation: jigglea 1s ease-in-out infinite;
+}
+
+
+@keyframes jigglea {
+    0% {
+        transform: rotate(30px,30px);
+    }
+    50% {
+        transform: rotate(0px,0px);
+    }
+    100% {
+        transform: rotate(-30px,-30px);
     }
 }
 

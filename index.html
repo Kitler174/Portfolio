@@ -8,14 +8,15 @@
 </head>
 <body>
     <header>
-        <h1>Cześć! Nazywam się Mateusz ;)</h1>
+        <h1 class="jiggle">Cześć! Nazywam się Mateusz ;)</h1>
         <p>Witaj na moim portfolio, gdzie możesz poznać moje projekty i umiejętności.</p>
     </header>
     
     <div class="container">
+        
         <section id="about">
             <h2>Moje zalety:</h2>
-            <p>Programuję w różnych językach takich jak C++, Python, C lub C#.</p>
+            <p>Programuję w różnych językach takich jak Docker, C++, Python, C lub C#.</p>
             <p>Jestem full-stack web developerem i posiadam doświadczenie w budowaniu aplikacji w realnym środowisku pracowniczym.</p>
             <p>Jestem pasjonatem programowania sztucznej inteligencji oraz systemów obrazowych w trybie tekstowym (uczę się trybu graficznego).</p>
             <p>Interesuję się również ogólnym działem IT, a dokładniej obsługiwaniem i konfiguracją Ubuntu Server.</p>
@@ -24,22 +25,60 @@
         
         <section id="projects">
             <h2>Moje projekty</h2>
-            <div class="additionals_">
-            <div class="project">
-                <h3>OCR</h3>
-                <p>Projekt ma na celu skanowanie obrazów i zaznaczanie zielonymi kwadratami obszary, 
-                    które zawierają liczby. Projekt zawiera interfejs graficzny, 
-                    który pozwala na zaznaczenie obszaru do skanowania lub skanowanie całego obrazu, 
-                    zaznaczanie dodatkowych obszarów, usuwanie obszarów i zapisywanie legendy w pliku PDF oraz pliku obrazu.
-                    Program można sprowadzić do rozszerzenia .exe
-                </p>
-            </div>
-            </div>
-            <div class="additionals_">
+            <div id="wyrownywacz">
+                <div class="additionals_" id="projekt1">
                 <div class="project">
-                    <h3>Projekt 2</h3>
-                    <p>Opis drugiego projektu.</p>
+                    <h3>OCR</h3>
+                    <p>Projekt ma na celu skanowanie obrazów i zaznaczanie zielonymi kwadratami obszary, 
+                        które zawierają liczby. Projekt zawiera interfejs graficzny, 
+                        który pozwala na zaznaczenie obszaru do skanowania lub skanowanie całego obrazu, 
+                        zaznaczanie dodatkowych obszarów, usuwanie obszarów i zapisywanie legendy w pliku PDF oraz pliku obrazu.
+                        Program można sprowadzić do rozszerzenia .exe
+                    </p>
                 </div>
+                </div>
+                <div class="additionals_inact" id="projekt2">
+                    <div class="project">
+                        <h3>mystt</h3>
+                        <p>Projekt jest oparty na klasyfikatorze. Ma on na celu przekształcać głos na liczby i 
+                            rozpoznawać na podstawie modelu jakie słowo zostało wypowiedziane. 
+                            Projekt zawiera skrypty którymi możesz samodzielnie uczyć model nowych słów (dodawanie liczb do bazy), 
+                            skrypt odpowiedzialny za uczenie modelu (pobiera dane z bazy) oraz program do testowania.
+                        </p>
+                    </div>
+                </div>
+                <div class="additionals_inact" id="projekt3">
+                    <div class="project">
+                        <h3>camera_ai</h3>
+                        <p>
+                            Projekt jest oparty na klasyfikatorze. Ma on na celu rozpoznawać obiekt który jest przedstawiony przed kamerą. Model można samodzielnie trenować oraz testować.
+                        </p>
+                    </div>
+                </div>
+                <div class="additionals_inact" id="projekt4">
+                    <div class="project">
+                        <h3>signAI</h3>
+                        <p>
+                            Projekt również jest oparty na klasyfikatorze.
+                            Jest to projekt django na którym po wejściu na 127.0.0.1:8000 można samodzielnie uczyć oraz testować rozpoznawanie cyfr na obrazku 20x20.
+                            Nie zawiera on systemu logowania ani ogólnych zabezpieczeń. Naukę należy zaczynać od indeksu 0.
+                        </p>
+                    </div>
+                </div>
+                <div class="additionals_inact" id="projekt5">
+                    <div class="project">
+                        <h3>dogcatai + dogcatai-api</h3>
+                        <p>Projekt dogcatai to witryna zbudowana na framework laravel. Ma
+                            on na celu sprawdzać czy wstawiony obrazek przedstawia kota czy psa. 
+                            Witryna posiada system logowania który jest dobrze zabezpieczony. Dogcatai-api to api które posiada klasyfikator który służy od rozpoznawaniu
+                            zwierzęcia na obrazku i zwracanie odpowiedzi do witryny. Dogcatai-api zawiera programy które automatycznie pobierają datasety.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="button1" onclick="suw(1)" style="margin-right: 10px;">Pokaż ostatni</button>
+                <button type="button" id="button2" onclick="suw(2)" style="margin-left: 10px;">Pokaż następny</button>
             </div>
         </section>
         
