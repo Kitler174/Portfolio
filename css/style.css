@@ -61,6 +61,7 @@ section p {
     user-select: none;
 }
 
+
 #about p{
     opacity: 0;
     transition: all 1s ease-in-out;
@@ -98,11 +99,11 @@ section p {
     text-align: left;
 }
 .project {
+    will-change: transform,font-size,color;
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
     position: relative;
-    cursor: pointer;
     transition: all 1s ease;
     width: 100%;
     height: 192px;
@@ -115,9 +116,9 @@ section p {
 }
 
 .project p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #555;
-    line-height: 1.6;
+    text-align: left;
 }
 
 #contact p {
@@ -145,8 +146,9 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1rem;
-    width:200px;
+    width:170px;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -159,6 +161,7 @@ button:hover {
 }
 
 .additionals_{
+    font-size: 2rem;
     border-radius: 16px;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
@@ -171,7 +174,7 @@ button:hover {
     max-height: 200px;
     min-height: 200px;
     overflow-y: auto;
-    visibility: visible;
+    opacity: 1;
 }
 
 .additionals_:hover{
@@ -183,7 +186,6 @@ button:hover {
     top:0;
     transform: translateX(120%);
     transition: transform 3s ease,opacity 3s ease;
-    opacity: 0;
     position: absolute;
     border-radius: 16px;
     border-bottom-left-radius: 16px;
@@ -192,6 +194,7 @@ button:hover {
     animation: borderAnimation 3s ease-in-out infinite;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 3s ease,opacity 3s ease;
+    overflow: hidden;
 }
 
 #wyrownywacz{
@@ -246,7 +249,19 @@ button:hover {
     .project {
         padding: 15px;
     }
+    .project p{
+        font-size: clamp(1rem, 2vw, 2rem);
+    }
     .container {
         width: 95%;
     }
+}
+
+.imgit{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
 }

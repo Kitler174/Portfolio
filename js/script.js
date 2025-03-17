@@ -53,11 +53,9 @@ function suw(act){
             }
             var el2 = document.getElementById("projekt"+index)
             el1.style.transform = "translateX(-120%)"
-            el1.style.opacity = "0"
             el1.className = "additionals_inact"
             el2.className = "additionals_"
             el2.style.transform = "translateX(0)"
-            el2.style.opacity = "1"
         }     
         else{
             if (index > 1){
@@ -86,10 +84,8 @@ function suw(act){
             
             var el2 = document.getElementById("projekt"+index)
             el1.style.transform = "translateX(120%)"
-            el1.style.opacity = "0"
             el1.className = "additionals_inact"
             el2.className = "additionals_"
             el2.style.transform = "translateX(0)"
-            el2.style.opacity = "1"
         }
 }
