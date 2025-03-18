@@ -27,74 +27,87 @@
         
         
         <section id="projects">
-            <h2>Moje projekty</h2>
-            <div id="wyrownywacz">
-                <div class="additionals_" id="projekt1">
-                <div class="project">
-                    <h3>OCR - System wykrywania liczb na obrazach</h3>
-                    <p>Projekt oparty na Pythonie i EasyOCR, służy do wykrywania liczb na obrazach i zaznaczania ich zielonymi kwadratami. 
-                       Użytkownik może wybrać obszar obrazu do analizy lub zeskanować cały obraz. 
-                       Program umożliwia edytowanie wyników: dodawanie, usuwanie i modyfikowanie zaznaczeń, 
-                       a następnie zapisanie wyników w formie pliku PDF z legendą oraz obrazu z zaznaczeniami. 
-                       Dodatkowo, projekt można skompilować do pliku .exe, co umożliwia jego uruchomienie na komputerach bez potrzeby instalacji Pythona.
-                    </p>
-                    <a href="https://github.com/Kitler174/OCR" target="_blank"><image title="Link do OCR" class="imgit" src="images/github_icon.png"></image></a>
-                </div>
-                </div>
-                <div class="additionals_inact" id="projekt2">
-                    <div class="project">
-                        <h3>mystt - Rozpoznawanie słów wypowiedzianych do mikrofonu</h3>
-                        <p>"Mystt" to aplikacja do rozpoznawania słów na podstawie nagrań głosowych. 
-                           Wykorzystuje XGBoost do klasyfikacji dźwięków, które są reprezentowane przez cechy MFCC (Mel-Frequency Cepstral Coefficients), 
-                           pobierane za pomocą librosa. Projekt obejmuje trzy główne etapy: zbieranie danych, szkolenie modelu oraz testowanie wyników.
-                        </p>
-                        <a href="https://github.com/Kitler174/mystt" target="_blank"><image title="Link do mystt" class="imgit" src="images/github_icon.png"></image></a>
-                    </div>
-                </div>
-                <div class="additionals_inact" id="projekt3">
-                    <div class="project">
-                        <h3>camera_ai - Rozpoznawanie obecności dłoni w obrazie</h3>
-                        <p>
-                            camera_ai to projekt oparty na klasyfikatorze XGBoost, 
-                            którego celem jest rozpoznawanie obecności dłoni na obrazie w czasie rzeczywistym z kamery. 
-                            Model jest trenowany na podstawie cech obrazu, takich jak szaro-skalowy obraz o rozmiarze 64x64 pikseli.
-                            Użytkownik może zbierać dane, etykietować obrazy (np. "dłoń" lub "brak dłoni"), a następnie używać modelu do predykcji w czasie rzeczywistym. Projekt pozwala na testowanie modelu bezpośrednio przez kamerę, wskazując, czy dłoń jest obecna na ekranie.
-                        </p>
-                        <a href="https://github.com/Kitler174/camera_ai" target="_blank"><image title="Link do camera_ai" class="imgit" src="images/github_icon.png"></image></a>
-                    </div>
-                </div>
-                <div class="additionals_inact" id="projekt4">
-                    <div class="project">
-                        <h3>signAI - Rozpoznawanie cyfr w obrazie 20x20</h3>
-                        <p>
-                            signAI to projekt oparty na klasyfikatorze w frameworku Django, 
-                            który umożliwia rozpoznawanie cyfr na obrazach o rozdzielczości 20x20 pikseli. 
-                            Aplikacja pozwala użytkownikowi na samodzielne trenowanie modelu, rozpoczynając naukę od indeksu 0. 
-                            Po uruchomieniu lokalnie na serwerze (127.0.0.1:8000) użytkownik może dodawać dane i testować model
-                        </p>
-                        <a href="https://github.com/Kitler174/signAI" target="_blank"><image title="Link do signAi" class="imgit" src="images/github_icon.png"></image></a>
-                    </div>
-                </div>
-                <div class="additionals_inact" id="projekt5">
-                    <div class="project">
-                        <h3>dogcatai + dogcatai-api</h3>
-                        <p>dogcatai to witryna oparta na frameworku Laravel, której celem jest rozpoznawanie, 
-                           czy wstawiony obrazek przedstawia kota, czy psa. Witryna zawiera system logowania z solidnym zabezpieczeniem. 
-                           dogcatai-api to API, które udostępnia klasyfikator oparty na XGBoost, 
-                           służący do rozpoznawania zwierząt na obrazkach i zwracania wyników do witryny. 
-                           API zawiera również programy automatycznie pobierające odpowiednie datasety.
-                        <a href="https://github.com/Kitler174/dogcatai" target="_blank"><image title="Link do dogcatai" class="imgit" id="openLinks" src="images/github_icon.png" target="_blank"></image></a>
-                        <a href="https://github.com/Kitler174/dogcatai-api" target="_blank"><image title="Link do dogcatai-api" style="right:68px" class="imgit" src="images/github_icon.png"></image></a>
-
-                    </div>
-                </div>
+            <h2>Moje projekty AI</h2>
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+                <button type="button" onclick="suw(1,'projekt','projectsai',this)" style="margin-right: 10px;">Pokaż ostatni</button>
+                <p id="in_0" style="display: flex; align-items: center;justify-content: center; margin-right: 10px;"></p>
+                <button type="button" onclick="suw(2, 'projekt','projectsai',this)">Pokaż następny</button>
             </div>
-            <div>
-                <button type="button" id="button1" onclick="suw(1)" style="margin-right: 10px;">Pokaż ostatni</button>
-                <button type="button" id="button2" onclick="suw(2)">Pokaż następny</button>
+            <div id="wyrownywacz">
+                <div id="projectsai">
+                    <div class="additionals_" id="projekt1">
+                    <div class="project">
+                        <h3>OCR - System wykrywania liczb na obrazach</h3>
+                        <p>Projekt oparty na Pythonie i EasyOCR, służy do wykrywania liczb na obrazach i zaznaczania ich zielonymi kwadratami. 
+                        Użytkownik może wybrać obszar obrazu do analizy lub zeskanować cały obraz. 
+                        Program umożliwia edytowanie wyników: dodawanie, usuwanie i modyfikowanie zaznaczeń, 
+                        a następnie zapisanie wyników w formie pliku PDF z legendą oraz obrazu z zaznaczeniami. 
+                        Dodatkowo, projekt można skompilować do pliku .exe, co umożliwia jego uruchomienie na komputerach bez potrzeby instalacji Pythona.
+                        </p>
+                        <a href="https://github.com/Kitler174/OCR" target="_blank"><image title="Link do OCR" class="imgit" src="images/github_icon.png"></image></a>
+                    </div>
+                    </div>
+                    <div class="additionals_inact" id="projekt2">
+                        <div class="project">
+                            <h3>mystt - Rozpoznawanie słów wypowiedzianych do mikrofonu</h3>
+                            <p>"Mystt" to aplikacja do rozpoznawania słów na podstawie nagrań głosowych. 
+                            Wykorzystuje XGBoost do klasyfikacji dźwięków, które są reprezentowane przez cechy MFCC (Mel-Frequency Cepstral Coefficients), 
+                            pobierane za pomocą librosa. Projekt obejmuje trzy główne etapy: zbieranie danych, szkolenie modelu oraz testowanie wyników.
+                            </p>
+                            <a href="https://github.com/Kitler174/mystt" target="_blank"><image title="Link do mystt" class="imgit" src="images/github_icon.png"></image></a>
+                        </div>
+                    </div>
+                    <div class="additionals_inact" id="projekt3">
+                        <div class="project">
+                            <h3>camera_ai - Rozpoznawanie obecności dłoni w obrazie</h3>
+                            <p>
+                                camera_ai to projekt oparty na klasyfikatorze XGBoost, 
+                                którego celem jest rozpoznawanie obecności dłoni na obrazie w czasie rzeczywistym z kamery. 
+                                Model jest trenowany na podstawie cech obrazu, takich jak szaro-skalowy obraz o rozmiarze 64x64 pikseli.
+                                Użytkownik może zbierać dane, etykietować obrazy (np. "dłoń" lub "brak dłoni"), a następnie używać modelu do predykcji w czasie rzeczywistym. Projekt pozwala na testowanie modelu bezpośrednio przez kamerę, wskazując, czy dłoń jest obecna na ekranie.
+                            </p>
+                            <a href="https://github.com/Kitler174/camera_ai" target="_blank"><image title="Link do camera_ai" class="imgit" src="images/github_icon.png"></image></a>
+                        </div>
+                    </div>
+                    <div class="additionals_inact" id="projekt4">
+                        <div class="project">
+                            <h3>signAI - Rozpoznawanie cyfr w obrazie 20x20</h3>
+                            <p>
+                                signAI to projekt oparty na klasyfikatorze w frameworku Django, 
+                                który umożliwia rozpoznawanie cyfr na obrazach o rozdzielczości 20x20 pikseli. 
+                                Aplikacja pozwala użytkownikowi na samodzielne trenowanie modelu, rozpoczynając naukę od indeksu 0. 
+                                Po uruchomieniu lokalnie na serwerze (127.0.0.1:8000) użytkownik może dodawać dane i testować model
+                            </p>
+                            <a href="https://github.com/Kitler174/signAI" target="_blank"><image title="Link do signAi" class="imgit" src="images/github_icon.png"></image></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        
+        <section id="projects">
+            <h2>Moje projekty full-stack</h2>
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+                <button type="button" id="button1" onclick="suw(1,'projekt2_','projectsfulls',this)" style="margin-right: 10px;">Pokaż ostatni</button>
+                <p id="in_1" style="display: flex; align-items: center;justify-content: center; margin-right: 10px;"></p>
+                <button type="button" id="button2" onclick="suw(2, 'projekt2_','projectsfulls',this)">Pokaż następny</button>
+            </div>
+            <div id="wyrownywacz">
+                <div id="projectsfulls">
+                    <div class="additionals_" id="projekt2_1">
+                        <div class="project">
+                            <h3>dogcatai + dogcatai-api</h3>
+                            <p>dogcatai to witryna oparta na frameworku Laravel, której celem jest rozpoznawanie, 
+                            czy wstawiony obrazek przedstawia kota, czy psa. Witryna zawiera system logowania z solidnym zabezpieczeniem. 
+                            dogcatai-api to API, które udostępnia klasyfikator oparty na XGBoost, 
+                            służący do rozpoznawania zwierząt na obrazkach i zwracania wyników do witryny. 
+                            API zawiera również programy automatycznie pobierające odpowiednie datasety.
+                            <a href="https://github.com/Kitler174/dogcatai" target="_blank"><image title="Link do dogcatai" class="imgit" id="openLinks" src="images/github_icon.png" target="_blank"></image></a>
+                            <a href="https://github.com/Kitler174/dogcatai-api" target="_blank"><image title="Link do dogcatai-api" style="right:68px" class="imgit" src="images/github_icon.png"></image></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="contact">
             <h2>Kontakt</h2>
             <p>Email: <a href="mailto:mateuszblaszczyk36@gmail.com">mateuszblaszczyk36@gmail.com</a></p>
@@ -103,7 +116,6 @@
 
         </section>
     </div>
-    
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -48,7 +48,6 @@ section h2 {
 
 section p {
     font-size: 2rem;
-    margin-bottom: 15px;
     text-align: justify;
     line-height: 1.8;
     color: black
@@ -72,6 +71,8 @@ section p {
     color: black;
     font-size: 1rem;
     margin-top:5px;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 #projects{
@@ -107,7 +108,7 @@ section p {
     position: relative;
     transition: all 1s ease;
     width: 100%;
-    height: 192px;
+    height: 300px;
 }
 
 .project h3 {
@@ -172,8 +173,8 @@ button:hover {
     transition: transform 3s ease,opacity 3s ease;
     width: 95%;
     position: relative;
-    max-height: 200px;
-    min-height: 200px;
+    max-height: 312px;
+    min-height: 312px;
     overflow-y: auto;
     opacity: 1;
 }
@@ -195,6 +196,8 @@ button:hover {
     animation: borderAnimation 3s ease-in-out infinite;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 3s ease,opacity 3s ease;
+    max-height: 312px;
+    min-height: 312px;
     overflow: hidden;
 }
 
@@ -227,6 +230,14 @@ button:hover {
     animation: jigglea 1s ease-in-out infinite;
 }
 
+.imgit{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
 
 @keyframes jigglea {
     0% {
@@ -253,16 +264,13 @@ button:hover {
     .project p{
         font-size: clamp(1rem, 2vw, 2rem);
     }
+    .project h3{
+        font-size: clamp(1.3rem, 2vw, 2rem);
+    }
     .container {
         width: 95%;
     }
-}
-
-.imgit{
-    position: absolute;
-    right: 4px;
-    top: 4px;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
+    .imgit{
+        display: none;
+    }
 }

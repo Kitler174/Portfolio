@@ -1,3 +1,4 @@
+var infolist = {};
 window.addEventListener('load', function() {
     const about = document.getElementById("about");
     const element_p = about.querySelectorAll('p');
@@ -5,53 +6,54 @@ window.addEventListener('load', function() {
     let totalHeight = 0;
     let gigaheig = 0;
     element_p.forEach(function(paragraph, index) {
-        gigaheig += paragraph.clientHeight;
+        gigaheig += paragraph.clientHeight+15;
     });
+    gigaheig+=30
     console.log(gigaheig);
-    about.style.height = gigaheig + 220 + "px";  
+    about.style.height = gigaheig + "px";  
     element_p.forEach(function(paragraph, index) {
         setTimeout(function() {
-            totalHeight += paragraph.clientHeight; 
-            gigaheig -= paragraph.clientHeight; 
-            about.style.height = totalHeight + 220 + "px"; 
-            about.style.marginBottom = gigaheig+ 20 + "px"; 
+            totalHeight += paragraph.clientHeight+15; 
+            gigaheig -= paragraph.clientHeight+15; 
+            about.style.height = totalHeight + 150 + "px"; 
+            about.style.marginBottom = gigaheig + "px"; 
             paragraph.style.opacity = "1";
             paragraph.style.transform = "translateX(0)";
         }, index * 1000);
     });
 });
 
-var index = 1;
-const b1 = document.getElementById("button1");
-const b2 = document.getElementById("button2");
-function suw(act){
-        var el1 = document.getElementById("projekt"+index)
-        
+function suw(act,pp,inform,th){
+        var infs = infolist[inform];
+        var index = infs[2];
+        var el1 = document.getElementById(pp+index);
         if (act == 2){
-            if (index < 5){
+            if (index < infs[0]){
                 index++;
+                document.getElementById("in_"+infs[1]).textContent = index+"/"+infs[0];
+                infolist[inform] = [infs[0], infs[1], index];
             }
             else {
-                b2.style.backgroundColor = "red";
-                b2.style.transform = "rotate(5deg)";
+                th.style.backgroundColor = "red";
+                th.style.transform = "rotate(5deg)";
             
                 setTimeout(() => {
-                    b2.style.transform = "rotate(-5deg)";
+                    th.style.transform = "rotate(-5deg)";
                 }, 100);
             
                 setTimeout(() => {
-                    b2.style.backgroundColor = "#3b5998";
-                    b2.style.transform = "rotate(5deg)";
+                    th.style.backgroundColor = "#3b5998";
+                    th.style.transform = "rotate(5deg)";
                 }, 200);
             
                 setTimeout(() => {
-                    b2.style.transform = "rotate(-5deg)";
+                    th.style.transform = "rotate(-5deg)";
                 }, 300);
                 setTimeout(() => {
-                    b2.style.transform = "rotate(0)";
+                    th.style.transform = "rotate(0)";
                 }, 300);
             }
-            var el2 = document.getElementById("projekt"+index)
+            var el2 = document.getElementById(pp+index)
             el1.style.transform = "translateX(-120%)"
             el1.className = "additionals_inact"
             el2.className = "additionals_"
@@ -60,32 +62,43 @@ function suw(act){
         else{
             if (index > 1){
                 index--;
+                infolist[inform] = [infs[0], infs[1], index];
+                document.getElementById("in_"+infs[1]).textContent = index+"/"+infs[0];
             }
             else {
-                b1.style.backgroundColor = "red";
-                b1.style.transform = "rotate(5deg)";
+                th.style.backgroundColor = "red";
+                th.style.transform = "rotate(5deg)";
             
                 setTimeout(() => {
-                    b1.style.transform = "rotate(-5deg)";
+                    th.style.transform = "rotate(-5deg)";
                 }, 100);
             
                 setTimeout(() => {
-                    b1.style.backgroundColor = "#3b5998";
-                    b1.style.transform = "rotate(5deg)";
+                    th.style.backgroundColor = "#3b5998";
+                    th.style.transform = "rotate(5deg)";
                 }, 200);
             
                 setTimeout(() => {
-                    b1.style.transform = "rotate(-5deg)";
+                    th.style.transform = "rotate(-5deg)";
                 }, 300);
                 setTimeout(() => {
-                    b1.style.transform = "rotate(0)";
+                    th.style.transform = "rotate(0)";
                 }, 300);
             }
             
-            var el2 = document.getElementById("projekt"+index)
+            var el2 = document.getElementById(pp+index)
             el1.style.transform = "translateX(120%)"
             el1.className = "additionals_inact"
             el2.className = "additionals_"
             el2.style.transform = "translateX(0)"
         }
 }
+
+const lis = ['projectsai','projectsfulls']
+document.addEventListener('DOMContentLoaded', function() {
+    lis.forEach(function(param, index) {
+        var element = document.getElementById(param).querySelectorAll(".additionals_inact").length+1;
+        infolist[param] = [element, index, 1];
+        document.getElementById("in_"+index).textContent = "1/"+element;
+    })
+});
