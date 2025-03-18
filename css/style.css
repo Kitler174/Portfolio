@@ -267,6 +267,10 @@ button:hover {
     .project h3{
         font-size: clamp(1.3rem, 2vw, 2rem);
     }
+    #text{
+        font-size: clamp(0.8rem, 2vw, 2rem);
+
+    }
     .container {
         width: 95%;
     }
