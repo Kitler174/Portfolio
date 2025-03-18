@@ -15,56 +15,62 @@
     <div class="container">
         
         <section id="about">
-            <h2>Moje zalety:</h2>
-            <p>Programuję w różnych językach takich jak Docker, C++, Python, C lub C#.</p>
-            <p>Jestem full-stack web developerem i posiadam doświadczenie w budowaniu aplikacji w realnym środowisku pracowniczym.</p>
-            <p>Jestem pasjonatem programowania sztucznej inteligencji oraz systemów obrazowych w trybie tekstowym (uczę się trybu graficznego).</p>
-            <p>Interesuję się również ogólnym działem IT, a dokładniej obsługiwaniem i konfiguracją Ubuntu Server.</p>
-            <p>Pracuję już w swoim zawodzie 2 lata :)</p>
+            <h2>Moje umiejętności:</h2>
+            <p>Posługuję się różnymi językami programowania, w tym Docker, C++, Python oraz C#.</p>
+            <p>Mam doświadczenie w niskopoziomowym programowaniu w assemblerze oraz w C, co pozwala mi lepiej zrozumieć architekturę systemów komputerowych i pisać efektywne programy.</p>
+            <p>Jako full-stack web developer mam doświadczenie w tworzeniu aplikacji w środowisku produkcyjnym, zarówno po stronie front-endu, jak i back-endu.</p>
+            <p>Moje pasje obejmują programowanie sztucznej inteligencji oraz rozwój systemów obrazowych w trybie tekstowym. Obecnie uczę się także pracy z grafiką komputerową.</p>
+            <p>Jestem także zainteresowany szeroko pojętym IT, w tym konfiguracją i administracją serwerów Ubuntu.</p>
+            <p>Posiadam doświadczenie w programowaniu mikrokontrolerów arduino oraz w tworzeniu urządzeń elektronicznych, co pozwala mi łączyć programowanie z elektroniką.</p>
+            <p>Posiadam 2-letnie doświadczenie zawodowe w branży programistycznej. :)</p>
         </section>
+        
         
         <section id="projects">
             <h2>Moje projekty</h2>
             <div id="wyrownywacz">
                 <div class="additionals_" id="projekt1">
                 <div class="project">
-                    <h3>OCR</h3>
-                    <p>Projekt ma na celu skanowanie obrazów i zaznaczanie zielonymi kwadratami obszary, 
-                        które zawierają liczby. Projekt zawiera interfejs graficzny, 
-                        który pozwala na zaznaczenie obszaru do skanowania lub skanowanie całego obrazu, 
-                        zaznaczanie dodatkowych obszarów, usuwanie obszarów i zapisywanie legendy w pliku PDF oraz pliku obrazu.
-                        Program można sprowadzić do rozszerzenia .exe
+                    <h3>OCR - System wykrywania liczb na obrazach</h3>
+                    <p>Projekt oparty na Pythonie i EasyOCR, służy do wykrywania liczb na obrazach i zaznaczania ich zielonymi kwadratami. 
+                       Użytkownik może wybrać obszar obrazu do analizy lub zeskanować cały obraz. 
+                       Program umożliwia edytowanie wyników: dodawanie, usuwanie i modyfikowanie zaznaczeń, 
+                       a następnie zapisanie wyników w formie pliku PDF z legendą oraz obrazu z zaznaczeniami. 
+                       Dodatkowo, projekt można skompilować do pliku .exe, co umożliwia jego uruchomienie na komputerach bez potrzeby instalacji Pythona.
                     </p>
                     <a href="https://github.com/Kitler174/OCR" target="_blank"><image title="Link do OCR" class="imgit" src="images/github_icon.png"></image></a>
                 </div>
                 </div>
                 <div class="additionals_inact" id="projekt2">
                     <div class="project">
-                        <h3>mystt</h3>
-                        <p>Projekt jest oparty na klasyfikatorze. Ma on na celu przekształcać głos na liczby i 
-                            rozpoznawać na podstawie modelu jakie słowo zostało wypowiedziane. 
-                            Projekt zawiera skrypty którymi możesz samodzielnie uczyć model nowych słów (dodawanie liczb do bazy), 
-                            skrypt odpowiedzialny za uczenie modelu (pobiera dane z bazy) oraz program do testowania.
+                        <h3>mystt - Rozpoznawanie słów wypowiedzianych do mikrofonu</h3>
+                        <p>"Mystt" to aplikacja do rozpoznawania słów na podstawie nagrań głosowych. 
+                           Wykorzystuje XGBoost do klasyfikacji dźwięków, które są reprezentowane przez cechy MFCC (Mel-Frequency Cepstral Coefficients), 
+                           pobierane za pomocą librosa. Projekt obejmuje trzy główne etapy: zbieranie danych, szkolenie modelu oraz testowanie wyników.
                         </p>
                         <a href="https://github.com/Kitler174/mystt" target="_blank"><image title="Link do mystt" class="imgit" src="images/github_icon.png"></image></a>
                     </div>
                 </div>
                 <div class="additionals_inact" id="projekt3">
                     <div class="project">
-                        <h3>camera_ai</h3>
+                        <h3>camera_ai - Rozpoznawanie obecności dłoni w obrazie</h3>
                         <p>
-                            Projekt jest oparty na klasyfikatorze. Ma on na celu rozpoznawać obiekt który jest przedstawiony przed kamerą. Model można samodzielnie trenować oraz testować.
+                            camera_ai to projekt oparty na klasyfikatorze XGBoost, 
+                            którego celem jest rozpoznawanie obecności dłoni na obrazie w czasie rzeczywistym z kamery. 
+                            Model jest trenowany na podstawie cech obrazu, takich jak szaro-skalowy obraz o rozmiarze 64x64 pikseli.
+                            Użytkownik może zbierać dane, etykietować obrazy (np. "dłoń" lub "brak dłoni"), a następnie używać modelu do predykcji w czasie rzeczywistym. Projekt pozwala na testowanie modelu bezpośrednio przez kamerę, wskazując, czy dłoń jest obecna na ekranie.
                         </p>
                         <a href="https://github.com/Kitler174/camera_ai" target="_blank"><image title="Link do camera_ai" class="imgit" src="images/github_icon.png"></image></a>
                     </div>
                 </div>
                 <div class="additionals_inact" id="projekt4">
                     <div class="project">
-                        <h3>signAI</h3>
+                        <h3>signAI - Rozpoznawanie cyfr w obrazie 20x20</h3>
                         <p>
-                            Projekt również jest oparty na klasyfikatorze.
-                            Jest to projekt django na którym po wejściu na 127.0.0.1:8000 można samodzielnie uczyć oraz testować rozpoznawanie cyfr na obrazku 20x20.
-                            Nie zawiera on systemu logowania ani ogólnych zabezpieczeń. Naukę należy zaczynać od indeksu 0.
+                            signAI to projekt oparty na klasyfikatorze w frameworku Django, 
+                            który umożliwia rozpoznawanie cyfr na obrazach o rozdzielczości 20x20 pikseli. 
+                            Aplikacja pozwala użytkownikowi na samodzielne trenowanie modelu, rozpoczynając naukę od indeksu 0. 
+                            Po uruchomieniu lokalnie na serwerze (127.0.0.1:8000) użytkownik może dodawać dane i testować model
                         </p>
                         <a href="https://github.com/Kitler174/signAI" target="_blank"><image title="Link do signAi" class="imgit" src="images/github_icon.png"></image></a>
                     </div>
@@ -72,11 +78,11 @@
                 <div class="additionals_inact" id="projekt5">
                     <div class="project">
                         <h3>dogcatai + dogcatai-api</h3>
-                        <p>Projekt dogcatai to witryna zbudowana na framework laravel. Ma
-                            on na celu sprawdzać czy wstawiony obrazek przedstawia kota czy psa. 
-                            Witryna posiada system logowania który jest dobrze zabezpieczony. Dogcatai-api to api które posiada klasyfikator który służy od rozpoznawaniu
-                            zwierzęcia na obrazku i zwracanie odpowiedzi do witryny. Dogcatai-api zawiera programy które automatycznie pobierają datasety.
-                        </p>
+                        <p>dogcatai to witryna oparta na frameworku Laravel, której celem jest rozpoznawanie, 
+                           czy wstawiony obrazek przedstawia kota, czy psa. Witryna zawiera system logowania z solidnym zabezpieczeniem. 
+                           dogcatai-api to API, które udostępnia klasyfikator oparty na XGBoost, 
+                           służący do rozpoznawania zwierząt na obrazkach i zwracania wyników do witryny. 
+                           API zawiera również programy automatycznie pobierające odpowiednie datasety.
                         <a href="https://github.com/Kitler174/dogcatai" target="_blank"><image title="Link do dogcatai" class="imgit" id="openLinks" src="images/github_icon.png" target="_blank"></image></a>
                         <a href="https://github.com/Kitler174/dogcatai-api" target="_blank"><image title="Link do dogcatai-api" style="right:68px" class="imgit" src="images/github_icon.png"></image></a>
 
@@ -93,6 +99,7 @@
             <h2>Kontakt</h2>
             <p>Email: <a href="mailto:mateuszblaszczyk36@gmail.com">mateuszblaszczyk36@gmail.com</a></p>
             <p>Numer telefonu: <a>+48 723 871 171</a></p>
+            <p>Github: <a href="https://github.com/Kitler174">https://github.com/Kitler174</a></p>
 
         </section>
     </div>

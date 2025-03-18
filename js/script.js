@@ -8,16 +8,16 @@ window.addEventListener('load', function() {
         gigaheig += paragraph.clientHeight;
     });
     console.log(gigaheig);
-    about.style.height = gigaheig + 200 + "px";  
+    about.style.height = gigaheig + 220 + "px";  
     element_p.forEach(function(paragraph, index) {
         setTimeout(function() {
             totalHeight += paragraph.clientHeight; 
             gigaheig -= paragraph.clientHeight; 
-            about.style.height = totalHeight + 200 + "px"; 
+            about.style.height = totalHeight + 220 + "px"; 
             about.style.marginBottom = gigaheig+ 20 + "px"; 
             paragraph.style.opacity = "1";
             paragraph.style.transform = "translateX(0)";
-        }, index * 500);
+        }, index * 1000);
     });
 });
 
