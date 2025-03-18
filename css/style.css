@@ -286,7 +286,7 @@ button:hover {
 }
 
 #text {
-    overflow: hidden; /* Ukrywa nadmiar tekstu */
+    overflow: hidden;
     white-space: nowrap; /* Zapewnia, że tekst nie będzie łamał się na nową linię */
     border-right: 4px solid black;
     animation: typing 4s steps(30) 1s 1 normal both; /* Efekt pisania */
