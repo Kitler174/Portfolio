@@ -1,4 +1,3 @@
-var highscore = 0; // Wysoki wynik
 ctx.fillStyle = "white";
 ctx.font = "20px Arial";
 const textWidth = ctx.measureText("Graj strzałkami góra, dół i w, s").width;

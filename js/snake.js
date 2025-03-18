@@ -1,7 +1,7 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 const gameSection = document.getElementById("games"); // Sekcja z grami
-var highsnake = 0;
+var highsnake = parseInt(getCookie("snakehighscore"));
 
 // Funkcja do włączenia pełnego ekranu i ukrycia treści strony
 function startsnake() {
@@ -77,6 +77,7 @@ function startsnake() {
             ctx.fillText("High Score: " + highsnake, 10, 40);
             if (score > highsnake) {
                 highsnake = score;
+                setCookie("snakehighscore", score);
             }
             return;
         }

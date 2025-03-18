@@ -121,3 +121,22 @@ document.addEventListener('DOMContentLoaded', function () {
         element.style.border = "none"
     }, 5000);
 });
+
+function setCookie(name, value) {
+    var expires = new Date();
+    expires.setFullYear(expires.getFullYear() + 10);
+    expires = "; expires=" + expires.toUTCString() 
+    document.cookie = name + "=" + (value || "") + expires + "; SameSite=Lax"; 
+}
+
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if (c.indexOf(nameEQ) === 0) {
+            return c.substring(nameEQ.length, c.length);
+        }
+    }
+    return 0;
+}
