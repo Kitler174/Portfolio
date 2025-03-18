@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/games.css">
 </head>
 <body>
     <header>
@@ -116,6 +117,29 @@
 
         </section>
     </div>
+
+    <section id="games">
+        <h2>Chcesz trochę odpocząć?</h2>
+        <h3>Pograj w minigry ;)</h3>
+        <div>
+            <button id="snakestart" type="button" onclick="startsnake()">Zagraj w snake</button>
+            <button id="stopSnakeButton">Zatrzymaj snake</button>
+        </div>
+        <div>
+            <button id="pongstart" type="button" onclick="pongstart()">Zagraj w pong</button>
+            <button id="stopPongButton">Zatrzymaj pong</button>
+        </div>
+        <canvas width="600" height="600" id="gameCanvas">
+        </canvas>
+    </section>
+    <div id="games-replacement">
+        <p>O nie! Normalnie w tej sekcji mógłbyś grać w minigry lecz masz zbyt mały ekran :(</p><br>
+        <p>Spróbuj zagrać na urządzeniu z większym ekranem i klawiaturą ;)</p>
+
+    </div>
     <script src="js/script.js"></script>
+    <script src="js/snake.js"></script>
+    <script src="js/pong.js"></script>
+
 </body>
 </html>
