@@ -1,5 +1,8 @@
 var highscore = 0; // Wysoki wynik
-
+ctx.fillStyle = "white";
+ctx.font = "20px Arial";
+const textWidth = ctx.measureText("Graj strzałkami góra, dół i w, s").width;
+const x = (canvas.width - textWidth) / 2;
 function pongstart() {
     document.body.style.overflow = "none";
     canvas.style.display = "block"; // Pokaż canvas
@@ -67,6 +70,7 @@ function pongstart() {
         ctx.font = "20px Arial";
         ctx.fillText("Left: " + scoreLeft, 10, 30);
         ctx.fillText("Right: " + scoreRight, canvas.width - 90, 30);
+        ctx.fillText("Graj strzałkami góra, dół i w, s",x, 30)
 
         // Ruch piłki
         ball.x += ball.dx;

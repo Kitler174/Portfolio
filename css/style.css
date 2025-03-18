@@ -274,3 +274,29 @@ button:hover {
         display: none;
     }
 }
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+#text {
+    overflow: hidden; /* Ukrywa nadmiar tekstu */
+    white-space: nowrap; /* Zapewnia, że tekst nie będzie łamał się na nową linię */
+    border-right: 4px solid black;
+    animation: typing 4s steps(30) 1s 1 normal both; /* Efekt pisania */
+    font-family: 'Courier New', Courier, monospace; /* Czcionka przypominająca terminal */
+    text-align: center;
+}
+
+#centering{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

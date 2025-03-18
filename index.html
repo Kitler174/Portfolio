@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1">
     <link rel="stylesheet" href="css/games.css">
 </head>
 <body>
-    <header>
-        <h1 class="jiggle">Cześć! Nazywam się Mateusz ;)</h1>
-        <p>Witaj na moim portfolio, gdzie możesz poznać moje projekty i umiejętności.</p>
+    <header id="centering">
+        <h1 class="jiggle">Cześć nazywam się Mateusz ;)</h1>
+        <p id="text">Witaj na moim portfolio, gdzie możesz poznać moje projekty i umiejętności.</p>
     </header>
     
     <div class="container">
@@ -31,7 +31,7 @@
             <h2>Moje projekty AI</h2>
             <div style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
                 <button type="button" onclick="suw(1,'projekt','projectsai',this)" style="margin-right: 10px;">Pokaż ostatni</button>
-                <p id="in_0" style="display: flex; align-items: center;justify-content: center; margin-right: 10px;"></p>
+                <p id="in_0" style="margin-right: 10px;"></p>
                 <button type="button" onclick="suw(2, 'projekt','projectsai',this)">Pokaż następny</button>
             </div>
             <div id="wyrownywacz">
@@ -89,7 +89,7 @@
             <h2>Moje projekty full-stack</h2>
             <div style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
                 <button type="button" id="button1" onclick="suw(1,'projekt2_','projectsfulls',this)" style="margin-right: 10px;">Pokaż ostatni</button>
-                <p id="in_1" style="display: flex; align-items: center;justify-content: center; margin-right: 10px;"></p>
+                <p id="in_1" style="margin-right: 10px;"></p>
                 <button type="button" id="button2" onclick="suw(2, 'projekt2_','projectsfulls',this)">Pokaż następny</button>
             </div>
             <div id="wyrownywacz">

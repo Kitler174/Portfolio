@@ -2,7 +2,7 @@ var infolist = {};
 window.addEventListener('load', function() {
     const about = document.getElementById("about");
     const element_p = about.querySelectorAll('p');
-    about.style.transition = "height 1s ease, margin 1s ease";
+    about.style.transition = "height 0.5s ease, margin 0.5s ease";
     let totalHeight = 0;
     let gigaheig = 0;
     element_p.forEach(function(paragraph, index) {
@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
             about.style.marginBottom = gigaheig + "px"; 
             paragraph.style.opacity = "1";
             paragraph.style.transform = "translateX(0)";
-        }, index * 1000);
+        }, index * 500);
     });
 });
 
@@ -101,4 +101,23 @@ document.addEventListener('DOMContentLoaded', function() {
         infolist[param] = [element, index, 1];
         document.getElementById("in_"+index).textContent = "1/"+element;
     })
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const text = '';
+    let i = 0;
+    const element = document.getElementById('text');
+    
+    function typeWriter() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100); // Co 100 ms dodaje kolejny znak
+        }
+    }
+    
+    typeWriter();
+    setTimeout(() => {
+        element.style.border = "none"
+    }, 5000);
 });
