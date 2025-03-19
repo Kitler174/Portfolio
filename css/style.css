@@ -108,6 +108,7 @@ section p {
     position: relative;
     transition: all 1s ease;
     width: 100%;
+    min-width: 100%;
     height: 300px;
 }
 
@@ -172,7 +173,6 @@ button:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 3s ease,opacity 3s ease;
     width: 95%;
-    position: relative;
     max-height: 312px;
     min-height: 312px;
     overflow-y: auto;
@@ -303,4 +303,9 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.categor {
+    width: 100%; /* Pełna szerokość rodzica */
+    position: relative; 
 }

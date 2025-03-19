@@ -54,7 +54,7 @@ function suw(act,pp,inform,th){
                 }, 300);
             }
             var el2 = document.getElementById(pp+index)
-            el1.style.transform = "translateX(-120%)"
+            el1.style.transform = "translateX(-200%)"
             el1.className = "additionals_inact"
             el2.className = "additionals_"
             el2.style.transform = "translateX(0)"
@@ -87,7 +87,7 @@ function suw(act,pp,inform,th){
             }
             
             var el2 = document.getElementById(pp+index)
-            el1.style.transform = "translateX(120%)"
+            el1.style.transform = "translateX(200%)"
             el1.className = "additionals_inact"
             el2.className = "additionals_"
             el2.style.transform = "translateX(0)"
