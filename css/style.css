@@ -86,6 +86,7 @@ section p {
     flex-direction: column;
     overflow: hidden;
     transition: all 2s ease;  
+    width: 100%;
 }
 
 #about p::before {
@@ -172,7 +173,7 @@ button:hover {
     animation: borderAnimation 3s ease-in-out infinite;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 3s ease,opacity 3s ease;
-    width: 95%;
+    width: 100%;
     max-height: 312px;
     min-height: 312px;
     overflow-y: auto;
@@ -184,7 +185,7 @@ button:hover {
 }
 
 .additionals_inact{
-    width: 95%;
+    width: 100%;
     top:0;
     transform: translateX(120%);
     transition: transform 3s ease,opacity 3s ease;
