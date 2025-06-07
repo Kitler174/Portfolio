@@ -1,0 +1,69 @@
+#games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+#gameCanvas {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border: 2px solid white;
+}
+
+#snakestart{
+    background-color: rgb(77, 128, 2);
+    transition: background-color 0.5s ease-in-out;
+}
+#snakestart:hover{
+    background-color: rgb(101, 163, 7);
+}
+
+#stopSnakeButton{
+    transition: background-color 0.5s ease-in-out;
+    background-color: rgb(77, 128, 2);
+}
+
+#stopSnakeButton:hover{
+    background-color: rgb(163, 7, 7);
+}
+
+#pongstart{
+    background-color: rgb(2, 31, 128);
+    transition: background-color 0.5s ease-in-out;
+}
+#pongstart:hover{
+    background-color: rgb(7, 49, 163);
+}
+
+#stopPongButton{
+    transition: background-color 0.5s ease-in-out;
+    background-color: rgb(2, 31, 128);
+}
+
+#stopPongButton:hover{
+    background-color: rgb(182, 9, 9);
+}
+
+#games-replacement {
+    display: none; /* Na normalnych ekranach nie pokazuj napisu */
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    border: solid black 4px;
+}
+@media screen and (max-width: 768px) {
+    #games {
+        display: none; /* Ukrywa element o id 'games' */
+    }
+    
+    #games-replacement {
+        display: block; /* Pokazuje element z napisem */
+    }
+}
