@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/games.css">
+</head>
+<body>
+    <header id="centering">
+        <h1 class="jiggle">Hi, my name is Mateusz ;)</h1>
+        <p id="text">Here you can explore my projects and skills!</p>
+    </header>
+    
+    <div class="container">
+        
+        <section id="about">
+            <h2>My skills:</h2>
+            <p>I work with various programming languages, including C++, Python, and C#. I also use tools such as Docker.</p>
+            <p>I have experience in low-level programming in assembler and C, which allows me to better understand computer system architecture and write efficient programs.</p>
+            <p>As a full-stack web developer, I have experience creating applications in production environments, both on the front-end and back-end side.</p>
+            <p>My passions include artificial intelligence programming and the development of text-based imaging systems. I am also currently learning computer graphics.</p>
+            <p>I am also interested in IT in general, including server configuration and administration on Ubuntu.</p>
+            <p>I have experience programming Arduino microcontrollers and creating electronic devices, which allows me to combine programming with electronics.</p>
+            <p>I have 2 years of professional experience in the programming industry. :)</p>
+        </section>
+        
+        
+        <section id="projects">
+            <h2>My AI projects</h2>
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+                <button type="button" onclick="suw(1,'projekt','projectsai',this)" style="margin-right: 10px;">Show previous</button>
+                <p id="in_0" style="margin-right: 10px;"></p>
+                <button type="button" onclick="suw(2, 'projekt','projectsai',this)">Show next</button>
+            </div>
+            <div id="wyrownywacz">
+                <div id="projectsai">
+                    <div class="additionals_" id="projekt1">
+                    <div class="project">
+                        <h3>OCR - Number detection system on images</h3>
+                        <p>This project, based on Python and EasyOCR, detects numbers on images and marks them with green boxes. 
+                        The user can select an image area for analysis or scan the entire image. 
+                        The program allows editing the results: adding, removing, and modifying selections, 
+                        and then saving results as a PDF file with a legend and an image with annotations. 
+                        Additionally, the project can be compiled into a .exe file, making it runnable on computers without Python installed.
+                        </p>
+                        <a href="https://github.com/Kitler174/OCR" target="_blank"><image title="Link to OCR" class="imgit" src="images/github_icon.png"></image></a>
+                    </div>
+                    </div>
+                    <div class="additionals_inact" id="projekt2">
+                        <div class="project">
+                            <h3>mystt - Speech recognition from microphone input</h3>
+                            <p>"Mystt" is an application for recognizing words based on voice recordings. 
+                            It uses XGBoost for sound classification, represented by MFCC (Mel-Frequency Cepstral Coefficients) features 
+                            extracted with librosa. The project includes three main stages: data collection, model training, and result testing.
+                            </p>
+                            <a href="https://github.com/Kitler174/mystt" target="_blank"><image title="Link to mystt" class="imgit" src="images/github_icon.png"></image></a>
+                        </div>
+                    </div>
+                    <div class="additionals_inact" id="projekt3">
+                        <div class="project">
+                            <h3>camera_ai - Detecting hand presence in an image</h3>
+                            <p>
+                                camera_ai is a project based on an XGBoost classifier, 
+                                designed to recognize whether a hand is present in real-time camera input. 
+                                The model is trained on image features, such as grayscale images resized to 64x64 pixels.  
+                                Users can collect data, label images (e.g., "hand" or "no hand"), and then use the model for real-time predictions.  
+                                The project allows testing directly via the camera, showing whether a hand is detected on screen.
+                            </p>
+                            <a href="https://github.com/Kitler174/camera_ai" target="_blank"><image title="Link to camera_ai" class="imgit" src="images/github_icon.png"></image></a>
+                        </div>
+                    </div>
+                    <div class="additionals_inact" id="projekt4">
+                        <div class="project">
+                            <h3>signAI - Digit recognition in 20x20 images</h3>
+                            <p>
+                                signAI is a project built with Django framework, 
+                                enabling recognition of digits in 20x20 pixel images. 
+                                The application allows users to train the model from scratch, starting from index 0. 
+                                Once launched locally on the server (127.0.0.1:8000), users can add data and test the model.
+                            </p>
+                            <a href="https://github.com/Kitler174/signAI" target="_blank"><image title="Link to signAI" class="imgit" src="images/github_icon.png"></image></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>My full-stack projects</h2>
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+                <button type="button" id="button1" onclick="suw(1,'projekt2_','projectsfulls',this)" style="margin-right: 10px;">Show previous</button>
+                <p id="in_1" style="margin-right: 10px;"></p>
+                <button type="button" id="button2" onclick="suw(2, 'projekt2_','projectsfulls',this)">Show next</button>
+            </div>
+            <div id="wyrownywacz">
+                <div id="projectsfulls" class="categor">
+                    <div class="additionals_" id="projekt2_1">
+                        <div class="project">
+                            <h3>dogcatai + dogcatai-api - Is it a dog or a cat?</h3>
+                            <p>dogcatai is a website built with the Laravel framework, designed to classify 
+                            whether an uploaded image shows a cat or a dog. The website includes a login system with strong security.  
+                            dogcatai-api is an API providing an XGBoost-based classifier 
+                            that recognizes animals in images and returns results to the website.  
+                            The API also includes programs that automatically fetch appropriate datasets.
+                            <a href="https://github.com/Kitler174/dogcatai" target="_blank"><image title="Link to dogcatai" class="imgit" id="openLinks" src="images/github_icon.png" target="_blank"></image></a>
+                            <a href="https://github.com/Kitler174/dogcatai-api" target="_blank"><image title="Link to dogcatai-api" style="right:68px" class="imgit" src="images/github_icon.png"></image></a>
+                        </div>
+                    </div>
+                    <div class="additionals_inact" id="projekt2_2">
+                        <div class="project">
+                            <h3>WorkApi - API with JWT authorization and containerization</h3>
+                            <p>This is an API built with ASP.NET Core, 
+                                providing authorization using JWT and interaction with a MariaDB database. 
+                                The application is containerized, making it easy to deploy in different environments.  
+                                The API provides access to resources such as users, orders, and inventory.  
+                                All resources are secured with authorization mechanisms and allow full interaction with a frontend application.</p>
+                            <a href="https://github.com/Kitler174/WorkApi" target="_blank"><image title="Link to WorkApi" class="imgit" id="openLinks" src="images/github_icon.png" target="_blank"></image></a>
+                        </div>
+                    </div>
+                    <div class="additionals_inact" id="projekt2_3">
+                        <div class="project" style="justify-items: space-between;">
+                            <h3>My portfolio - a project showcasing my skills</h3>
+                            <p>This portfolio is the best proof of my skills! Want to see the code?</p>
+                            <a href="https://github.com/Kitler174/Portfolio" target="_blank"><image title="Link to portfolio" class="imgit" id="openLinks" src="images/github_icon.png" target="_blank"></image></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>My system projects</h2>
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+                <button type="button" id="button1" onclick="suw(1,'projekt3_','projectssys',this)" style="margin-right: 10px;">Show previous</button>
+                <p id="in_2" style="margin-right: 10px;"></p>
+                <button type="button" id="button2" onclick="suw(2, 'projekt3_','projectssys',this)">Show next</button>
+            </div>
+            <div id="wyrownywacz">
+                <div id="projectssys" class="categor">
+                    <div class="additionals_" id="projekt3_1">
+                        <div class="project">
+                            <h3>CatOS</h3>
+                            <p>CatOS is a prototype operating system launched by graphical GRUB, featuring its own minimalist kernel.  
+                                The project includes a simple graphics system with a splash screen and an early login screen with cursor support.  
+                                It is developed in a low-level environment using C, C++, and assembler, with emphasis on full control over the hardware and graphics layer.</p>
+                            <a href="https://github.com/Kitler174/CatOS" target="_blank"><image title="Link to CatOS" class="imgit" id="openLinks" src="images/github_icon.png" target="_blank"></image></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:mateuszblaszczyk36@gmail.com">mateuszblaszczyk36@gmail.com</a></p>
+            <p>Github: <a href="https://github.com/Kitler174">https://github.com/Kitler174</a></p>
+
+        </section>
+    </div>
+
+    <section id="games">
+        <h2>Want to take a break?</h2>
+        <h3>Play some mini-games ;)</h3>
+        <div>
+            <button id="snakestart" type="button" onclick="startsnake()">Play Snake</button>
+            <button id="stopSnakeButton">Stop Snake</button>
+        </div>
+        <div>
+            <button id="pongstart" type="button" onclick="pongstart()">Play Pong</button>
+            <button id="stopPongButton">Stop Pong</button>
+        </div>
+        <canvas width="600" height="600" id="gameCanvas">
+        </canvas>
+    </section>
+    <div id="games-replacement">
+        <p>Oh no! Normally, you could play mini-games in this section, but your screen is too small :(</p><br>
+        <p>Try playing on a device with a larger screen and a keyboard ;)</p>
+
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/snake.js"></script>
+    <script src="js/pong.js"></script>
+
+</body>
+</html>
