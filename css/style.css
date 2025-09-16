@@ -263,14 +263,23 @@ button:hover {
     width: 100%;
     overflow: hidden;
 }
-
+.imgit-cont{
+    margin-top:30px;
+    position:relative;
+    width:100%;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    margin-left:10px;
+}
 .imgit {
-    position: absolute;
     right: 4px;
     top: 4px;
     width: 60px;
     height: 60px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 
@@ -290,15 +299,13 @@ button:hover {
     .project h3 {
         font-size: clamp(1.3rem, 2vw, 2rem);
     }
-    #text {
+    #centering p {
         font-size: clamp(0.8rem, 2vw, 2rem);
     }
     .container {
         width: 95%;
     }
-    .imgit {
-        display: none;
-    }
+
 }
 
 @keyframes typing {
