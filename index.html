@@ -32,8 +32,10 @@
         </section>
         <div id="selector-button"><button style="background-color: #ff9100; box-shadow: 0 0 20px #ff9100"
                 onclick="changeCat(this)">1</button><button onclick="changeCat(this)"
-                style="background-color: #1cddf7; box-shadow: 0 0 5px #1cddf7">2</button><button
-                onclick="changeCat(this)" style="box-shadow: 0 0 5px #30fa29; background-color: #30fa29;">3</button>
+                style="background-color: #1cddf7; box-shadow: 0 0 5px #1cddf7">2</button>
+            <button onclick="changeCat(this)" style="box-shadow: 0 0 5px #30fa29; background-color: #30fa29;">3</button>
+            <button onclick="changeCat(this)" style="box-shadow: 0 0 5px #b800f0; background-color: #b800f0;">4</button>
+
         </div>
         <div id="scrolller">
             <section id="projects" class="categor1">
@@ -220,12 +222,45 @@
                 </div>
             </section>
         </div>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:mateuszblaszczyk36@gmail.com">mateuszblaszczyk36@gmail.com</a></p>
-            <p>Github: <a href="https://github.com/Kitler174">https://github.com/Kitler174</a></p>
+        <section id="projects" class="categor4" style="display: none;">
+            <h2>My IT projects</h2>
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: row;">
+                <button type="button" id="button1" onclick="suw(1,'projekt4_','projectsit',this)"
+                    style="margin-right: 10px;">←</button>
+                <p id="in_2" style="margin-right: 10px;"></p>
+                <button type="button" id="button2" onclick="suw(2, 'projekt4_','projectsit',this)">→</button>
+            </div>
+            <div id="wyrownywacz">
+                <div id="projectsit" class="categor">
+                    <div class="additionals_" id="projekt4_1">
+                        <div class="project">
+                            <h3>Ubuntu-server-it</h3>
+                            <p>
+                                Ubuntu-server-it is a personal project for storing and showcasing essential IT
+                                configurations
+                                on Ubuntu, such as Nginx setups, SSL certificates, and system management notes.
+                                It serves as both documentation and a quick-start guide for basic server administration.
+                            </p>
 
+                            <div class="imgit-cont"><a href="https://github.com/Kitler174/Ubuntu-server-IT"
+                                    target="_blank">
+                                    <image title="Link to CatOS" class="imgit" id="openLinks"
+                                        src="images/github_icon.png" target="_blank"></image>
+                                </a></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </section>
+    </div>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:mateuszblaszczyk36@gmail.com">mateuszblaszczyk36@gmail.com</a></p>
+        <p>Github: <a href="https://github.com/Kitler174">https://github.com/Kitler174</a></p>
+
+    </section>
     </div>
     <script src="js/script.js"></script>
 </body>

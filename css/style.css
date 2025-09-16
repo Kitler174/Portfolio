@@ -237,6 +237,22 @@ button:hover {
     border-radius: 100%;
 }
 
+.categor4{
+    border: #b800f0 2px solid;
+    scrollbar-color: #b800f0 #1e1e1e;
+    scrollbar-width: 1px;
+
+
+}
+
+.categor4 button{
+    background-color: #b800f0;
+    color: #121212;
+}
+.categor4 .imgit{
+    background-color: #b800f0;
+    border-radius: 100%;
+}
 .additionals_inact {
     width: 100%;
     top: 0;

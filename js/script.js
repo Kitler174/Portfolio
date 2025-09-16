@@ -116,7 +116,7 @@ function suw(act,pp,inform,th){
         }
 }
 
-const lis = ['projectsai','projectsfulls', 'projectssys']
+const lis = ['projectsai','projectsfulls', 'projectssys', 'projectsit']
 document.addEventListener('DOMContentLoaded', function() {
     lis.forEach(function(param, index) {
         var element = document.getElementById(param).querySelectorAll(".additionals_inact").length+1;
@@ -167,7 +167,7 @@ const header = document.querySelector("header");
 const txt = document.getElementById("text");
 const selector_button = document.getElementById("selector-button");
 function changeCat(th) {
-    const table = ['categor1', 'categor2', 'categor3'];
+    const table = ['categor1', 'categor2', 'categor3', 'categor4'];
     table.forEach(function(param) {
         const elements = document.getElementsByClassName(param);
         for (let i = 0; i < elements.length; i++) {
@@ -199,6 +199,15 @@ function changeCat(th) {
         txt.style.color = "#30fa29";
         selector_button.style.borderLeft = "#30fa29 2px solid";
         selector_button.style.borderRight = "#30fa29 2px solid";
+    }
+    else if (th.textContent == "4") {
+        document.getElementsByClassName('categor4')[0].style.display = "block";
+        abot.style.border = "#b800f0 2px solid";
+        header.style.boxShadow = "#b800f0  0px 0px 20px 2px";
+        header.style.color = "#b800f0";
+        txt.style.color = "#b800f0";
+        selector_button.style.borderLeft = "#b800f0 2px solid";
+        selector_button.style.borderRight = "#b800f0 2px solid";
     }
 
     // teraz ustawiamy spread w box-shadow
